@@ -19,7 +19,7 @@
           <v-flex xs12 sm12 md12>
             <v-card>
               <blockquote>
-                This is test of dynamic CSS variables usage in <a href="https://vuetifyjs.com">Vuetify</a>. Source code available on <a href="https://github.com/darosh/vuetifyjs-dynamic-theme-example">GitHub</a>.
+                This is test of dynamic CSS variables usage in <a href="https://vuetifyjs.com">Vuetify</a>. Source code available on <a href="https://github.com/darosh/vuetifyjs-dynamic-theme-example">GitHub</a>. Click toolbar buttons to switch theme.
               </blockquote>
             </v-card>
           </v-flex>
