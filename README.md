@@ -1,6 +1,57 @@
 # vuetifyjs-dynamic-theme-example
 
-> A Vue.js project
+> This is test of dynamic CSS variables usage in Vuetify. See [demo online](https://darosh.github.io/vuetifyjs-dynamic-theme-example/dist/).
+
+## How it works?
+
+### [./src/stylus/main.styl](./src/stylus/main.styl) file:
+
+```styl
+@import '../../node_modules/vuetify/src/stylus/settings/_colors'
+
+body {
+  --primary: $blue.darken-2;
+  --accent: $amber.accent-3;
+  --secondary: $grey.base;
+
+  --info: $blue.base;
+  --warning: $amber.base;
+  --error: $red.accent-2;
+  --success: $green.base;
+}
+
+$theme := {
+  primary: var(--primary)
+  accent: var(--accent)
+  secondary: var(--secondary)
+
+  info: var(--info)
+  warning: var(--warning)
+  error: var(--error)
+  success: var(--success)
+}
+
+@import '../../node_modules/vuetify/src/stylus/main'
+```
+
+### [./src/App.vue](./src/App.vue) file:
+
+```js
+setTheme (theme) {
+  document.body.style.setProperty('--primary', theme[0])
+  document.body.style.setProperty('--accent', theme[1])
+  document.body.style.setProperty('--secondary', theme[2])
+}
+```
+
+### Fix in ```./node_modules/vuetify/src/stylus/tools/_progress-linear.styl``` source:
+
+```styl
+progress-linear(progress)
+  .progress-linear__bar
+    //background: lighten(progress, 50%)
+    background: lighten(black, 87.5%)
+```
 
 ## Build Setup
 
