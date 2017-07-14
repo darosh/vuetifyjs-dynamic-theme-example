@@ -4,9 +4,15 @@
 
 ## Issues
 
+Probably fixable by IE and edge specific CSS queries.
+
+### IE
+
+Black & White as [expected](http://caniuse.com/css-variables/embed).
+
 ### Edge
 
-Broken Badges and Picker.
+Broken Badges and Picker. My guess it has something to do with ```::before```, ```::after``` CSS selectors. 
 
 ## How it works?
 
