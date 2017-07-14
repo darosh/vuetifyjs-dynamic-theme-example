@@ -31,8 +31,7 @@
           ['pink', 'indigo', 'grey'],
           ['indigo', 'purple', 'pink'],
           ['orange', 'red', 'grey'],
-          ['grey', 'blue', 'orange'],
-          ['black', 'grey', 'green']
+          ['grey', 'blue', 'orange']
         ]
       }
     }
