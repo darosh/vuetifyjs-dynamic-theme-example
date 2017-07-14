@@ -5,7 +5,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn icon v-for="(theme, index) in themes" :key="index" @click.native="setTheme(theme)">
+      <v-btn v-if="dynamic" icon v-for="(theme, index) in themes" :key="index" @click.native="setTheme(theme)">
         <theme-icon :colors="theme"></theme-icon>
       </v-btn>
 
@@ -20,7 +20,9 @@
             <v-card>
               <blockquote>
                 This is test of dynamic CSS variables usage in <a href="https://vuetifyjs.com">Vuetify</a>. Source code available on <a
-                href="https://github.com/darosh/vuetifyjs-dynamic-theme-example">GitHub</a>. Click toolbar buttons to switch theme.
+                href="https://github.com/darosh/vuetifyjs-dynamic-theme-example">GitHub</a>.
+                <span v-if="dynamic">Click toolbar buttons to switch theme.</span>
+                <b v-if="!dynamic">Open this page in a better browser to switch theme.</b>
               </blockquote>
             </v-card>
           </v-flex>
@@ -34,17 +36,17 @@
                 <v-checkbox label="Primary"
                             v-model="checkbox"
                             color="primary"
-                            :value="true"
+                            :value="1"
                             hide-details></v-checkbox>
                 <v-checkbox label="Secondary"
                             v-model="checkbox"
                             color="secondary"
-                            :value="true"
+                            :value="1"
                             hide-details></v-checkbox>
                 <v-checkbox label="Accent"
                             v-model="checkbox"
                             color="accent"
-                            :value="true"
+                            :value="1"
                             hide-details></v-checkbox>
               </v-layout>
             </v-card>
@@ -59,17 +61,17 @@
                 <v-switch label="Primary"
                           v-model="switches"
                           color="primary"
-                          :value="true"
+                          :value="1"
                           hide-details></v-switch>
                 <v-switch label="Secondary"
                           v-model="switches"
                           color="secondary"
-                          :value="true"
+                          :value="1"
                           hide-details></v-switch>
                 <v-switch label="Accent"
                           v-model="switches"
                           color="accent"
-                          :value="true"
+                          :value="1"
                           hide-details></v-switch>
               </v-layout>
             </v-card>
@@ -84,17 +86,17 @@
                 <v-radio label="Primary"
                          v-model="radio"
                          color="primary"
-                         :value="true"
+                         :value="1"
                          hide-details></v-radio>
                 <v-radio label="Secondary"
                          v-model="radio"
                          color="secondary"
-                         :value="true"
+                         :value="1"
                          hide-details></v-radio>
                 <v-radio label="Accent"
                          v-model="radio"
                          color="accent"
-                         :value="true"
+                         :value="1"
                          hide-details></v-radio>
               </v-layout>
             </v-card>
@@ -200,6 +202,18 @@
 </template>
 
 <script>
+  let CSS_VARIABLES = false
+
+  // Feature detection
+  if ((window.CSS && window.CSS.supports && window.CSS.supports('--fake-var', 0)) &&
+    // Browser detection: Edge browser has bugs in some components
+    !(window.navigator.userAgent.indexOf('Edge') > -1)) {
+    CSS_VARIABLES = true
+    // import('./stylus/main.stylus')
+  } else {
+    import('./stylus/main.compatibility.stylus')
+  }
+
   export default {
     components: {
       'theme-icon': () => import('./components/ThemeIcon.vue'),
@@ -224,9 +238,10 @@
           ['#1976d2', '#ffc400', '#9e9e9e']
         ],
         date: null,
-        checkbox: true,
-        radio: true,
-        switches: true
+        checkbox: 1,
+        radio: 1,
+        switches: 1,
+        dynamic: CSS_VARIABLES
       }
     },
     methods: {
@@ -240,7 +255,7 @@
 </script>
 
 <style lang="stylus">
-  @import './stylus/main'
+  @import './stylus/main.stylus'
 
   [pa] {
     padding: 16px

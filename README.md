@@ -5,7 +5,7 @@
 
 ## Browser issues
 
-Probably fixable by IE and edge specific CSS queries.
+Theme switch is disabled by feature and browser detection where needed.
 
 ### IE
 
@@ -15,13 +15,15 @@ Black & White as [expected](http://caniuse.com/css-variables/embed).
 
 Broken Badges and Picker. My guess it has something to do with ```::before```, ```::after``` CSS selectors. 
 
+It loads style without CSS variables and the theme switch is disabled. 
+
 ## Contrast issues
 
 Unfortunately there is no text automatic color, which may lead to bad [usability](https://material.io/guidelines/style/color.html#color-color-system).
 
 ## How it works?
 
-### [./src/stylus/main.styl](./src/stylus/main.styl) file:
+### [./src/stylus/main.styl](src/stylus/main.stylus) file:
 
 ```styl
 @import '../../node_modules/vuetify/src/stylus/settings/_colors'
