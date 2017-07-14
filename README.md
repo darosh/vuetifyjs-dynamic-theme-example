@@ -44,7 +44,7 @@ setTheme (theme) {
 }
 ```
 
-### Fix in ```./node_modules/vuetify/src/stylus/tools/_progress-linear.styl``` source:
+### Fix in ```./node_modules/vuetify/src/stylus/tools/_progress-linear.styl``` source needed:
 
 ```styl
 progress-linear(progress)
