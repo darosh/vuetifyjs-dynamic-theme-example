@@ -17,7 +17,7 @@ Broken Badges and Picker. My guess it has something to do with ```::before```, `
 
 ## Contrast issues
 
-Unfortunately there is no text automatic color for, which may lead to bad [usability](https://material.io/guidelines/style/color.html#color-color-system).
+Unfortunately there is no text automatic color, which may lead to bad [usability](https://material.io/guidelines/style/color.html#color-color-system).
 
 ## How it works?
 
