@@ -2,6 +2,12 @@
 
 > This is test of dynamic CSS variables usage in Vuetify. See [demo online](https://darosh.github.io/vuetifyjs-dynamic-theme-example/dist/).
 
+## Issues
+
+### Edge
+
+Broken Badges and Picker.
+
 ## How it works?
 
 ### [./src/stylus/main.styl](./src/stylus/main.styl) file:
