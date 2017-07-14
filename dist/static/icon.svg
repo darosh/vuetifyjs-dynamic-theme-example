@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="24"
+   viewBox="0 0 24 24"
+   height="24"
+   fill="#000000">
+  <path
+     id="path4485"
+     fill="none"
+     d="M0 0h24v24H0V0z" />
+  <path
+     id="path4511"
+     d="M 11,0.046875 A 12,12 0 0 0 0,12 12,12 0 0 0 11,23.949219 Z" />
+  <path
+     id="path4509"
+     d="M 13,0.05078125 V 10.892578 H 23.939453 A 12,12 0 0 0 13,0.05078125 Z" />
+  <path
+     id="path4497"
+     d="M 13,12.892578 V 23.953125 A 12,12 0 0 0 23.955078,12.892578 Z" />
+</svg>
