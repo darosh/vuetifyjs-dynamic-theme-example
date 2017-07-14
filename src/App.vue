@@ -24,6 +24,19 @@
     </v-navigation-drawer>
     <v-toolbar fixed>
       <v-toolbar-side-icon @click.native.stop="drawer = !drawer" light></v-toolbar-side-icon>
+      <v-btn icon>
+        <theme-icon :colors="['teal', 'orange', 'grey']"></theme-icon>
+      </v-btn>
+      <v-btn icon>
+        <theme-icon :colors="['pink', 'indigo', 'grey']"></theme-icon>
+      </v-btn>
+      <v-btn icon>
+        <theme-icon :colors="['indigo', 'purple', 'pink']"></theme-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon>pie_chart</v-icon>
+      </v-btn>
+
       <v-btn
         icon
         light
@@ -93,7 +106,10 @@
 </template>
 
 <script>
+  const ThemeIcon = () => import('./components/ThemeIcon.vue')
+
   export default {
+    components: {'theme-icon': ThemeIcon},
     data () {
       return {
         clipped: false,
