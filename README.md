@@ -2,7 +2,8 @@
 
 > This is test of dynamic CSS variables usage in Vuetify. See [demo online](https://darosh.github.io/vuetifyjs-dynamic-theme-example/dist/).
 
-## Issues
+
+## Browser issues
 
 Probably fixable by IE and edge specific CSS queries.
 
@@ -13,6 +14,10 @@ Black & White as [expected](http://caniuse.com/css-variables/embed).
 ### Edge
 
 Broken Badges and Picker. My guess it has something to do with ```::before```, ```::after``` CSS selectors. 
+
+## Contrast issues
+
+Unfortunately there is no text automatic color for, which may lead to bad [usability](https://material.io/guidelines/style/color.html#color-color-system).
 
 ## How it works?
 
