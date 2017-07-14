@@ -19,19 +19,84 @@
           <v-flex xs12 sm12 md12>
             <v-card>
               <blockquote>
-                This is test of dynamic CSS variables usage in <a href="https://vuetifyjs.com">Vuetify</a>. Source code available on <a href="https://github.com/darosh/vuetifyjs-dynamic-theme-example">GitHub</a>. Click toolbar buttons to switch theme.
+                This is test of dynamic CSS variables usage in <a href="https://vuetifyjs.com">Vuetify</a>. Source code available on <a
+                href="https://github.com/darosh/vuetifyjs-dynamic-theme-example">GitHub</a>. Click toolbar buttons to switch theme.
               </blockquote>
             </v-card>
           </v-flex>
           <v-flex xs12 sm6 md4>
             <v-card>
               <v-card-title primary-title>
-                <div class="title">Badges</div>
+                <div class="title">Checkboxes</div>
               </v-card-title>
               <v-divider></v-divider>
-              <div pa>
-                <badges-3></badges-3>
-              </div>
+              <v-layout row wrap ml-3>
+                <v-checkbox label="Primary"
+                            v-model="checkbox"
+                            color="primary"
+                            :value="true"
+                            hide-details></v-checkbox>
+                <v-checkbox label="Secondary"
+                            v-model="checkbox"
+                            color="secondary"
+                            :value="true"
+                            hide-details></v-checkbox>
+                <v-checkbox label="Accent"
+                            v-model="checkbox"
+                            color="accent"
+                            :value="true"
+                            hide-details></v-checkbox>
+              </v-layout>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-card>
+              <v-card-title primary-title>
+                <div class="title">Switches</div>
+              </v-card-title>
+              <v-divider></v-divider>
+              <v-layout row wrap ml-3>
+                <v-switch label="Primary"
+                          v-model="switches"
+                          color="primary"
+                          :value="true"
+                          hide-details></v-switch>
+                <v-switch label="Secondary"
+                          v-model="switches"
+                          color="secondary"
+                          :value="true"
+                          hide-details></v-switch>
+                <v-switch label="Accent"
+                          v-model="switches"
+                          color="accent"
+                          :value="true"
+                          hide-details></v-switch>
+              </v-layout>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-card>
+              <v-card-title primary-title>
+                <div class="title">Radios</div>
+              </v-card-title>
+              <v-divider></v-divider>
+              <v-layout row wrap ml-3>
+                <v-radio label="Primary"
+                         v-model="radio"
+                         color="primary"
+                         :value="true"
+                         hide-details></v-radio>
+                <v-radio label="Secondary"
+                         v-model="radio"
+                         color="secondary"
+                         :value="true"
+                         hide-details></v-radio>
+                <v-radio label="Accent"
+                         v-model="radio"
+                         color="accent"
+                         :value="true"
+                         hide-details></v-radio>
+              </v-layout>
             </v-card>
           </v-flex>
           <v-flex xs12 sm6 md4>
@@ -49,10 +114,32 @@
           <v-flex xs12 sm6 md4>
             <v-card>
               <v-card-title primary-title>
-                <div class="title">Cards</div>
+                <div class="title">Progress</div>
               </v-card-title>
               <v-divider></v-divider>
-              <cards-3></cards-3>
+              <div pa>
+                <progress-circular-3></progress-circular-3>
+              </div>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-card>
+              <v-card-title primary-title>
+                <div class="title">Tabs</div>
+              </v-card-title>
+              <v-divider></v-divider>
+              <tabs-1></tabs-1>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm6 md4>
+            <v-card>
+              <v-card-title primary-title>
+                <div class="title">Badges</div>
+              </v-card-title>
+              <v-divider></v-divider>
+              <div pa>
+                <badges-3></badges-3>
+              </div>
             </v-card>
           </v-flex>
           <v-flex xs12 sm6 md4>
@@ -63,17 +150,6 @@
               <v-divider></v-divider>
               <div pa>
                 <chips-3></chips-3>
-              </div>
-            </v-card>
-          </v-flex>
-          <v-flex xs12 sm6 md4>
-            <v-card>
-              <v-card-title primary-title>
-                <div class="title">Progress</div>
-              </v-card-title>
-              <v-divider></v-divider>
-              <div pa>
-                <progress-circular-3></progress-circular-3>
               </div>
             </v-card>
           </v-flex>
@@ -91,10 +167,10 @@
           <v-flex xs12 sm6 md4>
             <v-card>
               <v-card-title primary-title>
-                <div class="title">Tabs</div>
+                <div class="title">Cards</div>
               </v-card-title>
               <v-divider></v-divider>
-              <tabs-1></tabs-1>
+              <cards-3></cards-3>
             </v-card>
           </v-flex>
           <v-flex xs12 sm6 md4>
@@ -147,7 +223,10 @@
           ['#ffc400', '#9e9e9e', '#1976d2'],
           ['#1976d2', '#ffc400', '#9e9e9e']
         ],
-        date: null
+        date: null,
+        checkbox: true,
+        radio: true,
+        switches: true
       }
     },
     methods: {
