@@ -104,7 +104,7 @@
               </v-card-title>
               <v-divider></v-divider>
               <div>
-                <v-date-picker landscape></v-date-picker>
+                <v-date-picker landscape v-model="date"></v-date-picker>
               </div>
             </v-card>
           </v-flex>
@@ -146,7 +146,8 @@
           ['#f50057', '#4fc3f7', '#3f51b5'],
           ['#ffc400', '#9e9e9e', '#1976d2'],
           ['#1976d2', '#ffc400', '#9e9e9e']
-        ]
+        ],
+        date: null
       }
     },
     methods: {
